@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="./components/searchbar/searchbar.css">
+  <link rel="stylesheet" href="./components/navbar/navbar.css">
+  <link rel="stylesheet" href="./components/displayWatch/displayWatch.css">
+
+
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- Search Bar -->
+  <input type="text" id="searchMoviesButton" onkeyup="searchMovies()" placeholder="Search for movies.." title="Type in a name" >
+  <ul id="searchMoviesList">
+  </ul>
+  <!-- Search Bar -->
+
+  <!-- Movie Detail -->
+  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#movieDetail" onclick="openMovieDetail()">Open Small Modal</button> -->
+
+  <div class="modal fade" id="movieDetail" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        
+        <!-- <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div> -->
+        
+        <!-- <div class="modal-body">
+          <p>This is a small modal.</p>
+        </div> -->
+        
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Watched</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Add</button>
+        </div> -->
+
+      </div>
+    </div>
+  </div>
+  <!-- Movie Detail -->
+
+  <!--  -->
+
+  <section id="display">
+    <div class="movie-watch"> 
+      <img src="https://via.placeholder.com/70" alt="">
+      <div class="movie-watch-info">
+        <div>
+          <h5>Titulo</h5>
+        </div>
+        <div>
+          tags
+        </div>
+      </div>
+      <div class="movie-watch-controller">
+        <div>
+          subir
+        </div>
+        <div>
+          bajar
+        </div>
+      </div>
+    </div>
+    <div class="movie-watch"> 
+      <img src="https://via.placeholder.com/70" alt="">
+      <div class="movie-watch-info">
+        <div>
+          <h5>Titulo</h5>
+        </div>
+        <div>
+          tags
+        </div>
+      </div>
+      <div class="movie-watch-controller">
+        <div>
+          subir
+        </div>
+        <div>
+          bajar
+        </div>
+      </div>
+    </div>
+    <div class="movie-watch"> 
+      <img src="https://via.placeholder.com/70" alt="">
+      <div class="movie-watch-info">
+        <div>
+          <h5>Titulo</h5>
+        </div>
+        <div>
+          tags
+        </div>
+      </div>
+      <div class="movie-watch-controller">
+        <div>
+          subir
+        </div>
+        <div>
+          bajar
+        </div>
+      </div>
+    </div>
+    <div class="movie-watch"> 
+      <img src="https://via.placeholder.com/70" alt="">
+      <div class="movie-watch-info">
+        <div>
+          <h5>Titulo</h5>
+        </div>
+        <div>
+          tags
+        </div>
+      </div>
+      <div class="movie-watch-controller">
+        <div>
+          subir
+        </div>
+        <div>
+          bajar
+        </div>
+      </div>
+    </div>
+    <div class="movie-watch"> 
+      <img src="https://via.placeholder.com/70" alt="">
+      <div class="movie-watch-info">
+        <div>
+          <h5>Titulo</h5>
+        </div>
+        <div>
+          tags
+        </div>
+      </div>
+      <div class="movie-watch-controller">
+        <div>
+          subir
+        </div>
+        <div>
+          bajar
+        </div>
+      </div>
+    </div>
+    <div class="movie-watch"> 
+      <img src="https://via.placeholder.com/70" alt="">
+      <div class="movie-watch-info">
+        <div>
+          <h5>Titulo</h5>
+        </div>
+        <div>
+          tags
+        </div>
+      </div>
+      <div class="movie-watch-controller">
+        <div>
+          subir
+        </div>
+        <div>
+          bajar
+        </div>
+      </div>
+    </div>
+    <div class="movie-watch"> 
+      <img src="https://via.placeholder.com/70" alt="">
+      <div class="movie-watch-info">
+        <div>
+          <h5>Titulo</h5>
+        </div>
+        <div>
+          tags
+        </div>
+      </div>
+      <div class="movie-watch-controller">
+        <div>
+          subir
+        </div>
+        <div>
+          bajar
+        </div>
+      </div>
+    </div>
+    <div class="movie-watch"> 
+      <img src="https://via.placeholder.com/70" alt="">
+      <div class="movie-watch-info">
+        <div>
+          <h5>Titulo</h5>
+        </div>
+        <div>
+          tags
+        </div>
+      </div>
+      <div class="movie-watch-controller">
+        <div>
+          subir
+        </div>
+        <div>
+          bajar
+        </div>
+      </div>
+    </div>
+    <div class="movie-watch"> 
+      <img src="https://via.placeholder.com/70" alt="">
+      <div class="movie-watch-info">
+        <div>
+          <h5>Titulo</h5>
+        </div>
+        <div>
+          tags
+        </div>
+      </div>
+      <div class="movie-watch-controller">
+        <div>
+          subir
+        </div>
+        <div>
+          bajar
+        </div>
+      </div>
+    </div>
+    <div class="movie-watch"> 
+      <img src="https://via.placeholder.com/70" alt="">
+      <div class="movie-watch-info">
+        <div>
+          <h5>Titulo</h5>
+        </div>
+        <div>
+          tags
+        </div>
+      </div>
+      <div class="movie-watch-controller">
+        <div>
+          subir
+        </div>
+        <div>
+          bajar
+        </div>
+      </div>
+    </div>
+    <div class="movie-watch"> 
+      <img src="https://via.placeholder.com/70" alt="">
+      <div class="movie-watch-info">
+        <div>
+          <h5>Titulo</h5>
+        </div>
+        <div>
+          tags
+        </div>
+      </div>
+      <div class="movie-watch-controller">
+        <div>
+          subir
+        </div>
+        <div>
+          bajar
+        </div>
+      </div>
+    </div>
+    <div class="movie-watch"> 
+      <img src="https://via.placeholder.com/70" alt="">
+      <div class="movie-watch-info">
+        <div>
+          <h5>Titulo</h5>
+        </div>
+        <div>
+          tags
+        </div>
+      </div>
+      <div class="movie-watch-controller">
+        <div>
+          subir
+        </div>
+        <div>
+          bajar
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav id="navbar-container">
+    <div class="navbar-button select" onclick="displayWatch()"> Watch</div>
+    <div class="navbar-button" onclick="displayFriends()"> Friends</div>
+    <div class="navbar-button" onclick="displayWatched()"> Watched</div>
+  </nav>
+
+
+  <script src="./components/searchbar/searchBar.js"></script>
+  <script src="./components/movieDetail/movieDetail.js"></script>
+  <script src="./services/openapi.js"></script>
+  <script src="./utils/movies.js"></script>
+</body>
+</html>
