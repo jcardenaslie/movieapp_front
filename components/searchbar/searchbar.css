@@ -2,32 +2,83 @@
   box-sizing: border-box;
 }
 
+.title-bar{
+  width: 100%;
+  height: 45px;
+  position: fixed;
+  display: flex;
+  top: 0;
+  box-shadow: 0 1px 0 0 rgb(0 0 0 / 20%);
+  background-color: white;
+}
+
+.title-bar h3{
+  margin: 0;
+  height: 100%;
+  padding: 10px;
+}
+
+#searchBar {
+  position: fixed;
+  top: 45px;
+  display: flex;
+  height: 45px;
+  width: 100%;
+  box-shadow: 0 1px 0 0 rgb(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+#search-action {
+  width: 55px;
+  border: none;
+  background-color: transparent;
+  font-size: x-large;
+  padding: 0px;
+  margin: 5px;
+}
+
 #searchMoviesButton {
-  background-image: url('/css/searchicon.png');
+  /* background-image: url('/css/searchicon.png'); */
   background-position: 10px 12px;
   background-repeat: no-repeat;
   width: 100%;
   font-size: 16px;
-  padding: 12px 20px 12px 40px;
+  padding: 12px 20px 12px 5px;
   border: 1px solid #ddd;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
+  border: none;
 }
 
 #searchMoviesList {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  margin-top: 90px;
+}
+
+#searchMoviesList li {
+  display: flex;
+  width: 100%;
+  border: 1px solid #ddd;
+  background-color: #f6f6f6;
+  height: 80px;
 }
 
 #searchMoviesList li a {
-  border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
   color: black;
-  display: block
+  display: block;
+  flex: 2;
+  margin: auto;
+}
+
+#searchMoviesList li button {
+  text-decoration: none;
+  margin: 5px;
+  flex: 1;
 }
 
 #searchMoviesList li a:hover:not(.header) {

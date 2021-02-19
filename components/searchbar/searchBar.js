@@ -1,53 +1,91 @@
 
-const input = document.getElementById("searchMoviesButton");
-const movieListElement = document.getElementById("searchMoviesList");
+// SEARCH BAR
 
 const movieDetailRef = "movieDetail" // referencia al modal de detalle de la pelicula
 
-let movies = []
-let page = 1
-let searchTerm = ""
+const searchIcon = '<i class="fa fa-search"></i>'
+const cancelIcon = '<i class="fa fa-times"></i>'
 
-async function searchMovies(page) {
-  
-  movies = movies.concat(await getPage("star wars", page ))
-  
-  populateList(movies)
+let searchString = ""
 
-}
+input.addEventListener("keypress", (event) => {
+  searchString += event.key
+} )
 
-const searchNextPage = () => {
-  searchMovies(page += 1)
-}
-
-const populateList = (movies) => {
-  movieListElement.innerHTML = ""
-  for (i = 0; i < movies.length; i++) {
-
-      console.log(movies[i].Title);
-      let newLi = SearchMovieElement(movies[i])
-      movieListElement.innerHTML += newLi
+input.addEventListener("keyup", (event) => {
+  if (event.key === "Backspace" && searchString.length > 0 ) {
+    searchString = searchString.slice(0, -1)
   }
+} )
 
-  movieListElement.appendChild(ViewMoreButton())
-} 
+actionIcon.addEventListener("click", () => {
+  clearSearch()
+  actionIcon.innerHTML = searchIcon
+})
 
-const ViewMoreButton = () => {
+const populateSearchList = (elements, searchNext) => {
+  movieListElement.innerHTML = elements
+  movieListElement.appendChild(ViewMoreButton(searchNext))
+}
+
+const clearSearch = () => {
+  moviesResults = []
+  moviesPage = 1
+  movieListElement.innerHTML = ""
+  searchString = ""
+
+  friendsResult = []
+  friendsPage = 1
+  friendsPageLimit = 10
+
+  input.value = ""
+  actionIcon.onclick = searchMovies
+  actionIcon.innerHTML = searchIcon
+}
+
+const ViewMoreButton = (searchNext) => {
   let li = document.createElement("LI");
   li.classList.add("viewmore");
+  
   li.addEventListener('click', () => {
-    console.log("view More");
-    searchNextPage()
+    searchNext()
   })
 
   let anchor = document.createElement("A");
   anchor.href= "#"
-  anchor.innerHTML = "View More"
+  anchor.innerHTML = "View Next"
 
   li.appendChild(anchor)
 
   return li
 }
+
+// MOVIES
+let moviesResults = []
+let moviesPage = 1
+let moviesPageLimit = 5
+
+async function searchMovies() {
+
+  if (searchString.length < 4) 
+    return []
+  
+  actionIcon.innerHTML = cancelIcon
+  moviesResults = moviesResults.concat(await getPage("star wars", moviesPage))
+  
+  let movieElements = ""
+  for (i = 0; i < moviesResults.length; i++) {
+    let newLi = SearchMovieElement(moviesResults[i])
+    movieElements += newLi
+}
+
+  populateSearchList(movieElements, searchNextPage)
+
+}
+
+const searchNextPage = () => {
+  searchMovies(moviesPage += 1)
+} 
 
 const SearchMovieElement = (movie) => {
   return `<li>
@@ -62,7 +100,3 @@ const SearchMovieElement = (movie) => {
           </li>`
 }
 
-const clearSearchMovieList = () => {
-  movies = []
-  page = 1
-}

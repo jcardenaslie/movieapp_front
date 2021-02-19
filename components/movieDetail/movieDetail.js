@@ -4,12 +4,7 @@ let modalContent = modal.getElementsByClassName("modal-content")[0];
 
 const openMovieDetail = async (movieTitle) => {
 
-  console.log('====================================');
-  console.log("Searching for ", movieTitle);
-  console.log('====================================');
   const movie = await getMovieDetailByTitle(movieTitle)
-
-  console.log(movie);
 
   modalContent.innerHTML = "";
   modalContent.innerHTML += ModalHeader(movie);

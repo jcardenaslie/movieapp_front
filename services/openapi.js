@@ -18,3 +18,13 @@ const getMovieDetailByTitle = async (title) => {
   const data = await result.json()
   return data
 }
+
+const getMovies = async (movieNames) => {
+  const result = await Promise.all( 
+    movieNames.map( async name => {
+      return await getMovieDetailByTitle(name)
+    })
+  )
+
+  return result
+}

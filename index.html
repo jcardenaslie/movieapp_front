@@ -13,21 +13,33 @@
   <link rel="stylesheet" href="./components/searchbar/searchbar.css">
   <link rel="stylesheet" href="./components/navbar/navbar.css">
   <link rel="stylesheet" href="./components/displayWatch/displayWatch.css">
-
+  <link rel="stylesheet" href="./components/displayWatched/displayWatched.css">
+  <link rel="stylesheet" href="./components/displayFriends/displayFriends.css">
 
   <title>Document</title>
 </head>
 <body>
 
+  <div class="title-bar">
+    <h3 id="screen-title">Screen</h3>
+    <!-- <a href="./components/login/login.html" class="btn btn-primary">Out!</a> -->
+  </div>
   <!-- Search Bar -->
-  <input type="text" id="searchMoviesButton" onkeyup="searchMovies()" placeholder="Search for movies.." title="Type in a name" >
+  <div id="searchBar">
+    <button id="search-action"><i class="fa fa-search"></i></button>
+    <input 
+      type="text" 
+      id="searchMoviesButton" 
+      onkeyup="searchMovies()" 
+      placeholder="Search for movies.." 
+      title="Type in a name" 
+      >
+  </div>
   <ul id="searchMoviesList">
   </ul>
   <!-- Search Bar -->
 
   <!-- Movie Detail -->
-  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#movieDetail" onclick="openMovieDetail()">Open Small Modal</button> -->
-
   <div class="modal fade" id="movieDetail" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -51,249 +63,43 @@
   </div>
   <!-- Movie Detail -->
 
-  <!--  -->
-
+  <!-- List Section -->
   <section id="display">
-    <div class="movie-watch"> 
-      <img src="https://via.placeholder.com/70" alt="">
-      <div class="movie-watch-info">
-        <div>
-          <h5>Titulo</h5>
-        </div>
-        <div>
-          tags
-        </div>
-      </div>
-      <div class="movie-watch-controller">
-        <div>
-          subir
-        </div>
-        <div>
-          bajar
-        </div>
-      </div>
-    </div>
-    <div class="movie-watch"> 
-      <img src="https://via.placeholder.com/70" alt="">
-      <div class="movie-watch-info">
-        <div>
-          <h5>Titulo</h5>
-        </div>
-        <div>
-          tags
-        </div>
-      </div>
-      <div class="movie-watch-controller">
-        <div>
-          subir
-        </div>
-        <div>
-          bajar
-        </div>
-      </div>
-    </div>
-    <div class="movie-watch"> 
-      <img src="https://via.placeholder.com/70" alt="">
-      <div class="movie-watch-info">
-        <div>
-          <h5>Titulo</h5>
-        </div>
-        <div>
-          tags
-        </div>
-      </div>
-      <div class="movie-watch-controller">
-        <div>
-          subir
-        </div>
-        <div>
-          bajar
-        </div>
-      </div>
-    </div>
-    <div class="movie-watch"> 
-      <img src="https://via.placeholder.com/70" alt="">
-      <div class="movie-watch-info">
-        <div>
-          <h5>Titulo</h5>
-        </div>
-        <div>
-          tags
-        </div>
-      </div>
-      <div class="movie-watch-controller">
-        <div>
-          subir
-        </div>
-        <div>
-          bajar
-        </div>
-      </div>
-    </div>
-    <div class="movie-watch"> 
-      <img src="https://via.placeholder.com/70" alt="">
-      <div class="movie-watch-info">
-        <div>
-          <h5>Titulo</h5>
-        </div>
-        <div>
-          tags
-        </div>
-      </div>
-      <div class="movie-watch-controller">
-        <div>
-          subir
-        </div>
-        <div>
-          bajar
-        </div>
-      </div>
-    </div>
-    <div class="movie-watch"> 
-      <img src="https://via.placeholder.com/70" alt="">
-      <div class="movie-watch-info">
-        <div>
-          <h5>Titulo</h5>
-        </div>
-        <div>
-          tags
-        </div>
-      </div>
-      <div class="movie-watch-controller">
-        <div>
-          subir
-        </div>
-        <div>
-          bajar
-        </div>
-      </div>
-    </div>
-    <div class="movie-watch"> 
-      <img src="https://via.placeholder.com/70" alt="">
-      <div class="movie-watch-info">
-        <div>
-          <h5>Titulo</h5>
-        </div>
-        <div>
-          tags
-        </div>
-      </div>
-      <div class="movie-watch-controller">
-        <div>
-          subir
-        </div>
-        <div>
-          bajar
-        </div>
-      </div>
-    </div>
-    <div class="movie-watch"> 
-      <img src="https://via.placeholder.com/70" alt="">
-      <div class="movie-watch-info">
-        <div>
-          <h5>Titulo</h5>
-        </div>
-        <div>
-          tags
-        </div>
-      </div>
-      <div class="movie-watch-controller">
-        <div>
-          subir
-        </div>
-        <div>
-          bajar
-        </div>
-      </div>
-    </div>
-    <div class="movie-watch"> 
-      <img src="https://via.placeholder.com/70" alt="">
-      <div class="movie-watch-info">
-        <div>
-          <h5>Titulo</h5>
-        </div>
-        <div>
-          tags
-        </div>
-      </div>
-      <div class="movie-watch-controller">
-        <div>
-          subir
-        </div>
-        <div>
-          bajar
-        </div>
-      </div>
-    </div>
-    <div class="movie-watch"> 
-      <img src="https://via.placeholder.com/70" alt="">
-      <div class="movie-watch-info">
-        <div>
-          <h5>Titulo</h5>
-        </div>
-        <div>
-          tags
-        </div>
-      </div>
-      <div class="movie-watch-controller">
-        <div>
-          subir
-        </div>
-        <div>
-          bajar
-        </div>
-      </div>
-    </div>
-    <div class="movie-watch"> 
-      <img src="https://via.placeholder.com/70" alt="">
-      <div class="movie-watch-info">
-        <div>
-          <h5>Titulo</h5>
-        </div>
-        <div>
-          tags
-        </div>
-      </div>
-      <div class="movie-watch-controller">
-        <div>
-          subir
-        </div>
-        <div>
-          bajar
-        </div>
-      </div>
-    </div>
-    <div class="movie-watch"> 
-      <img src="https://via.placeholder.com/70" alt="">
-      <div class="movie-watch-info">
-        <div>
-          <h5>Titulo</h5>
-        </div>
-        <div>
-          tags
-        </div>
-      </div>
-      <div class="movie-watch-controller">
-        <div>
-          subir
-        </div>
-        <div>
-          bajar
-        </div>
-      </div>
+    <div id="display-container" class="center-center">
+        <h4>Add a movie to watch</h4>
     </div>
   </section>
+  <!-- List Section -->
 
+  <!-- Navbar -->
   <nav id="navbar-container">
     <div class="navbar-button select" onclick="displayWatch()"> Watch</div>
     <div class="navbar-button" onclick="displayFriends()"> Friends</div>
     <div class="navbar-button" onclick="displayWatched()"> Watched</div>
   </nav>
+  <!-- Navbar -->
+
+  <script>
+    const screenTitle = document.getElementById("screen-title");
+    const input = document.getElementById("searchMoviesButton");
+    const movieListElement = document.getElementById("searchMoviesList");
+    const actionIcon = document.getElementById("search-action")
+    const display = document.getElementById("display")
+  </script>
 
 
+  <script src="./services/openapi.js"></script>
+  <script src="./models/movies.js"></script>
+  <script src="./models/friends.js"></script>
   <script src="./components/searchbar/searchBar.js"></script>
   <script src="./components/movieDetail/movieDetail.js"></script>
-  <script src="./services/openapi.js"></script>
-  <script src="./utils/movies.js"></script>
+  <script src="./components/displayWatch/displayWatch.js"></script>
+  <script src="./components/displayWatched/displayWatched.js"></script>
+  <script src="./components/displayFriends/displayFriends.js"></script>
+  <script src="./mock/users.js"></script>
+
+  <script>
+    displayWatch()
+  </script>
 </body>
 </html>
