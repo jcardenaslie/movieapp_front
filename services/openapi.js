@@ -1,4 +1,4 @@
-const OPEN_API_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=24b0afcf"
+const OPEN_API_URL = "https://www.omdbapi.com/?i=tt3896198&apikey=24b0afcf"
 
 
 const getPage = async(movie, page) => {
