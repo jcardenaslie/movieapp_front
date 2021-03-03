@@ -10,12 +10,21 @@
   top: 0;
   box-shadow: 0 1px 0 0 rgb(0 0 0 / 20%);
   background-color: white;
+  display: flex;
+    align-items: center;
 }
 
 .title-bar h3{
   margin: 0;
   height: 100%;
   padding: 10px;
+  flex: 1;
+
+}
+
+.menu-bar {
+  margin-right: 10px;
+    font-size: 24px;
 }
 
 #searchBar {

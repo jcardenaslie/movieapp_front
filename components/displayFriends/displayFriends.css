@@ -45,9 +45,9 @@
   width: 55%;
 }
 
-.movie-watch-controller {
+.friend-list-controller {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 20%;
   padding: 5px;

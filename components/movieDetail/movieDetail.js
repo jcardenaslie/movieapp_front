@@ -4,6 +4,8 @@ let modalContent = modal.getElementsByClassName("modal-content")[0];
 
 const openMovieDetail = async (movieTitle) => {
 
+  if (!movieTitle)
+    return
   const movie = await getMovieDetailByTitle(movieTitle)
 
   modalContent.innerHTML = "";

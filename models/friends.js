@@ -12,8 +12,16 @@ const addFriend = (newFriend) => {
 }
 
 const getFriends = () => {
-  const friends = localStorage.getItem(KEY_FRIENDS)
-  return friends ? JSON.parse(friends) : []
+  const friensdIds = localStorage.getItem(KEY_FRIENDS)
+
+  if (!friensdIds.length)
+    return []
+
+  const friends = users.filter( u => friensdIds.includes(String(u.id)) )
+
+  
+
+  return friends
 }
 
 

@@ -1,4 +1,5 @@
-const users = [{"id":1,"first_name":"Marge","last_name":"MacPadene","email":"mmacpadene0@issuu.com","gender":"F","username":"mmacpadene0"},
+const users = [
+{"id":1,"first_name":"Marge","last_name":"MacPadene","email":"mmacpadene0@issuu.com","gender":"F","username":"mmacpadene0"},
 {"id":2,"first_name":"Caesar","last_name":"Vobes","email":"cvobes1@spiegel.de","gender":"M","username":"cvobes1"},
 {"id":3,"first_name":"Kyla","last_name":"Molfino","email":"kmolfino2@engadget.com","gender":"F","username":"kmolfino2"},
 {"id":4,"first_name":"Pearle","last_name":"Silverston","email":"psilverston3@plala.or.jp","gender":"F","username":"psilverston3"},

@@ -9,17 +9,22 @@ const cancelIcon = '<i class="fa fa-times"></i>'
 let searchString = ""
 
 input.addEventListener("keypress", (event) => {
+  moviesPage = 1
   searchString += event.key
 } )
 
 input.addEventListener("keyup", (event) => {
+
   if (event.key === "Backspace" && searchString.length > 0 ) {
     searchString = searchString.slice(0, -1)
+    clearSearch()
   }
-} )
+
+})
 
 actionIcon.addEventListener("click", () => {
   clearSearch()
+  clearSearchInput()
   actionIcon.innerHTML = searchIcon
 })
 
@@ -32,15 +37,18 @@ const clearSearch = () => {
   moviesResults = []
   moviesPage = 1
   movieListElement.innerHTML = ""
-  searchString = ""
 
   friendsResult = []
   friendsPage = 1
   friendsPageLimit = 10
 
-  input.value = ""
   actionIcon.onclick = searchMovies
   actionIcon.innerHTML = searchIcon
+}
+
+const clearSearchInput = () => {
+  input.value = ""
+  searchString = ""
 }
 
 const ViewMoreButton = (searchNext) => {
@@ -67,17 +75,30 @@ let moviesPageLimit = 5
 
 async function searchMovies() {
 
-  if (searchString.length < 4) 
-    return []
+  if (searchString.length < 4) {
+     return
+  }
+
+  if (moviesPage === 1){
+    clearSearch()
+  }
+
+  console.log('====================================');
+  console.log(searchString);
+  console.log('====================================');
   
   actionIcon.innerHTML = cancelIcon
-  moviesResults = moviesResults.concat(await getPage("star wars", moviesPage))
+  // moviesResults = moviesResults.concat(await getPage("star wars", moviesPage))
+  moviesResults = moviesResults.concat(await getPage(searchString, moviesPage))
+
+  if (moviesResults.length === 0) 
+    return
   
   let movieElements = ""
   for (i = 0; i < moviesResults.length; i++) {
     let newLi = SearchMovieElement(moviesResults[i])
     movieElements += newLi
-}
+  }
 
   populateSearchList(movieElements, searchNextPage)
 
@@ -88,6 +109,14 @@ const searchNextPage = () => {
 } 
 
 const SearchMovieElement = (movie) => {
+  console.log('====================================');
+  console.log(movie);
+  console.log('====================================');
+
+  if (!movie) {
+    return ""
+  }
+
   return `<li>
             <a 
               data-toggle="modal"
